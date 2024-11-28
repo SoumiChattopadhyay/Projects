@@ -1,0 +1,35 @@
+*{
+    color:rgb(193, 231, 234);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+    color:rgb(151, 186, 178);
+    text-shadow: 0 0 8px black;
+}
+.container{
+    height:300px;
+    width:300px;
+    text-align:center;
+    margin:0 auto;
+    padding:20px;
+}
+.card img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    margin:10px;
+}
+.container2{
+    text-align:center;
+    margin:20px;
+}
+body{
+    background-color:bisque;
+}
+.div1{
+    background-color: rgb(10, 124, 135);
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+}
