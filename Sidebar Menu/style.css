@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Poppins";
+}
+/* since div is a block element it already takes the entire width of the container 
+but not the height */
+.main_box{
+    background-image:url("photo.jpg");
+    height:100vh;
+    background-size: cover;
+}
+.btn_one i{
+    color:white;
+    font-size:30px;
+    font-weight: 700;
+    position:absolute;
+    left:16px;
+    line-height:60px;
+    cursor:pointer;
+    transition:all 0.3s linear;
+}
+.sidebar_menu{
+    /* positioned relative to entire document(body of html) and no space created for it in the page layout*/
+    position:fixed;
+    width:300px;
+    height:100vh;
+    background-color: rgb(255,255,255,0.1);
+    box-shadow: 0 0 7px rgb(255,255,255,0.5);
+    border-radius: 8px; 
+    left:-300px;
+    transition:all 0.3s linear;
+}
+ .sidebar_menu .logo{
+/* positioned relative to its closest ancestor (.sidebar_menu) */
+    position:absolute;
+    width:100%;
+    /* if i do height 60px the div will just enlarge */
+    /* that content takes space of 60px */
+    line-height: 60px;
+    box-shadow:0 2px 4px rgb(255,255,255,0.5);
+    height:60px;
+}
+.sidebar_menu .logo a{
+    color:white;
+    text-decoration: none;
+    /* positioned relative to closest containing block or ancestor(.logo) */
+    position:absolute;
+    left:50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidebar_menu .btn_two i{
+    color:grey;
+    font-size:30px;
+    font-weight: 700;
+    line-height: 60px;
+    position:absolute;
+    left:250px;
+    opacity:0;
+    cursor:pointer;
+    transition:all 0.3s linear;
+}
+.sidebar_menu .menu{
+    position:absolute;
+    width:100%;
+    top:80px;
+}
+.sidebar_menu .menu li{
+    margin-top:6px;
+    padding:10px 20px;
+}
+.sidebar_menu .menu i,a{
+    color:white;
+    text-decoration: none;
+}
+.sidebar_menu .menu i{
+    padding-right:8px;
+}
+.sidebar_menu .social_media{
+    position:absolute;
+    left:25%;
+    bottom:5%;
+}
+.sidebar_menu .social_media i{
+    color:white;
+    padding:0 5px;
+    opacity:0.5;
+}
+#check{
+    display:none;
+}
+.sidebar_menu .menu li:hover{
+    box-shadow:0 0 4px rgb(255,255,255,0.5);
+}
+.btn_one i:hover{
+    /* on hovering this doesnt change size becoz
+    wo niche wali layer pe aur iske upar abhi sidebar menu ka layer hai */
+    font-size: 32px;
+}
+.btn_two i:hover{
+    font-size: 32px;
+}
+.social_media i:hover{
+    opacity:1;
+    transform:scale(1.15);
+}
+#check:checked ~.sidebar_menu{
+    left:0;
+}
+#check:checked ~.btn_one i{
+    opacity:0;
+}
+#check:checked ~.sidebar_menu .btn_two i{
+    opacity:1;
+}
